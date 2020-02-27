@@ -8,7 +8,6 @@ public class IndexController {
 
 	@GetMapping("/index")
 	public String index() {
-		adasdasdas
 		return "Hola Mundo, desde comanda ;)";
 	}
 	
