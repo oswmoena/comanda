@@ -4,9 +4,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
-import cl.moena.comanda.Model.Producto;
+import cl.moena.comanda.Model.Estado;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Producto, Integer>, JpaSpecificationExecutor<Producto> {
+public interface EstadoRepository extends JpaRepository<Estado, Integer>, JpaSpecificationExecutor<Estado>{
 
 }

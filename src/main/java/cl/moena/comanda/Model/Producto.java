@@ -33,13 +33,20 @@ public class Producto {
 	@Column (name = "precio")
 	private Integer precio;
 	
+	@Column (name = "detalle", columnDefinition = "text")
+	private String detalle;
+	
 	@Column (name= "vigencia")
 	private Boolean vigencia;
 	
-	@OneToOne(targetEntity = Categoria.class )
-	@JoinColumn(name = "id_categoria", referencedColumnName = "id", insertable = true, updatable = true)
-	private Categoria idCategoria;
+	@OneToOne(targetEntity = Tipo.class )
+	@JoinColumn(name = "id_tipo", referencedColumnName = "id", insertable = true, updatable = true)
+	private Tipo idTipo;
 
+	@OneToOne(targetEntity = Estado.class )
+	@JoinColumn(name = "id_estado", referencedColumnName = "id", insertable = true, updatable = true)
+	private Estado idEstado;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -72,12 +79,28 @@ public class Producto {
 		this.vigencia = vigencia;
 	}
 
-	public Categoria getIdCategoria() {
-		return idCategoria;
+	public Tipo getIdTipo() {
+		return idTipo;
 	}
 
-	public void setIdCategoria(Categoria idCategoria) {
-		this.idCategoria = idCategoria;
+	public void setIdTipo(Tipo idTipo) {
+		this.idTipo = idTipo;
+	}
+
+	public String getDetalle() {
+		return detalle;
+	}
+
+	public void setDetalle(String detalle) {
+		this.detalle = detalle;
+	}
+
+	public Estado getIdEstado() {
+		return idEstado;
+	}
+
+	public void setIdEstado(Estado idEstado) {
+		this.idEstado = idEstado;
 	}
 	
 	

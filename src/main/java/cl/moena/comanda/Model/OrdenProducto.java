@@ -39,6 +39,9 @@ public class OrdenProducto {
 	@Column (name = "cantidad")
 	private Integer cantidad;
 	
+	@Column (name = "descuento")
+	private Integer descuento;
+	
 	@Column (name = "vigencia")
 	private Boolean vigencia;
 
@@ -80,6 +83,14 @@ public class OrdenProducto {
 
 	public void setVigencia(Boolean vigencia) {
 		this.vigencia = vigencia;
+	}
+
+	public Integer getDescuento() {
+		return descuento;
+	}
+
+	public void setDescuento(Integer descuento) {
+		this.descuento = descuento;
 	}
 	
 	
